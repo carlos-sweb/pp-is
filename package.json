@@ -1,0 +1,31 @@
+{
+  "devDependencies": {},
+  "name": "pp-is",
+  "description": "## Methods",
+  "version": "1.0.0",
+  "main": "src/is.js",
+  "scripts": {
+    "compile": "terser --output src/pp-is*.min.js --compress --mangle --comments false -- modules/is*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos-sweb/pp-is.git"
+  },
+  "keywords": [
+    "isArray",
+    "isBoolean",
+    "isDate",
+    "isFunction",
+    "isNull",
+    "isNumber",
+    "isObject",
+    "isString",
+    "isUndefined"
+  ],
+  "author": "Carlos Illesca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlos-sweb/pp-is/issues"
+  },
+  "homepage": "https://github.com/carlos-sweb/pp-is#readme"
+}

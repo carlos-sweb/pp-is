@@ -1,7 +1,7 @@
 /*!!
- * Power Panel pp-is <https://github.com/carlos-sweb/pp-events>
+ * Power Panel pp-is - pp-isArray <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.0.0 (2020/05/14 18:12 PM)
+ * @version 1.0.0 (2020/06/07 19:54 PM)
  * Released under the MIT License
  */
 (function(global,factory){
@@ -11,12 +11,8 @@
       var exports = global.isArray = factory();
       }()
   ));
-  })(this,function(){   
-
+  })(this,function(){
     return function( value ){
-
-        return Object.prototype.toString.call( value  ) === '[object Array]' 
-
+        return Object.prototype.toString.call( value  ) === '[object Array]'
     }
-        
-  });
+  })

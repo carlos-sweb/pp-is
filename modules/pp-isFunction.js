@@ -6,17 +6,13 @@
  */
 (function(global,factory){
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-    typeof define === 'function' && define.amd ? define('isBoolean', factory) :
+    typeof define === 'function' && define.amd ? define('isFunction', factory) :
     (global = global || self, (function () {
-      var exports = global.isBoolean = factory();
+      var exports = global.isFunction = factory();
       }()
   ));
-  })(this,function(){   
-
+  })(this,function(){
     return function( value ){
-
-      return value === true || value === false || Object.prototype.toString.call( value  ) === '[object Boolean]' 
-
+      return Object.prototype.toString.call( value  ) === '[object Function]'
     }
-        
   });
