@@ -1,7 +1,7 @@
 {
   "devDependencies": {},
   "name": "pp-is",
-  "description": "## Methods",
+  "description": "Collection of methods for check",
   "version": "1.0.0",
   "main": "src/is.js",
   "scripts": {
@@ -20,7 +20,8 @@
     "isNumber",
     "isObject",
     "isString",
-    "isUndefined"
+    "isUndefined",
+    "isElement"
   ],
   "author": "Carlos Illesca",
   "license": "MIT",

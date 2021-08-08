@@ -11,7 +11,7 @@
       var exports = global.ppIs = factory();
       }()
   ));
-  })(this,function(){
+  })(this,function(){    
       return {
         isArray:function( value ){
             return Object.prototype.toString.call( value  ) === '[object Array]'
