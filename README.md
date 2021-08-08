@@ -18,40 +18,22 @@ npm i pp-is --save
 ## Methods
 
 ### `isArray`
-
-```javascript
-Event.on("eventName",myFunction);
-```
 ---
-
 ### `isBoolean`
-```javascript
-Event.emit("eventName",{
-	mydata:"myvalue",
-	otherData:"otherValue"
-});
-```
 ---
 ### `isDate`
 ---
-
 ### `isElement`
 ---
-
 ### `isFunction`
 ---
-
 ### `isNull`
 ---
-
 ### `isNumber`
 ---
-
 ### `isObject`
 ---
-
 ### `isString`
 ---
-
 ### `isUndefined`
 ---
