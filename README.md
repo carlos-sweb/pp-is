@@ -32,51 +32,26 @@ Event.emit("eventName",{
 });
 ```
 ---
-
 ### `isDate`
-```javascript
-Event.checkOn("eventName");
-```
 ---
 
 ### `isElement`
-```javascript
-Event.removeListener("eventName",myFunction);
-```
 ---
 
 ### `isFunction`
-```javascript
-Event.checkOn("eventName");
-```
 ---
 
 ### `isNull`
-```javascript
-Event.checkOn("eventName");
-```
 ---
 
 ### `isNumber`
-```javascript
-Event.checkOn("eventName");
-```
 ---
 
 ### `isObject`
-```javascript
-Event.checkOn("eventName");
-```
 ---
 
 ### `isString`
-```javascript
-Event.checkOn("eventName");
-```
 ---
 
 ### `isUndefined`
-```javascript
-Event.checkOn("eventName");
-```
 ---
