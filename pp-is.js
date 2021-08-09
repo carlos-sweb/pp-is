@@ -11,37 +11,70 @@
       var exports = global.ppIs = factory();
       }()
   ));
-  })(this,function(){    
+  })(this,function(){
+      // =======================================================================
+      var isArray  = function( value ){
+          return Object.prototype.toString.call( value  ) === '[object Array]'
+      }
+      // =======================================================================
+      var isBoolean = function( value ){
+        return value === true || value === false || Object.prototype.toString.call( value  ) === '[object Boolean]'
+      }
+      // =======================================================================
+      var isDate = function( value ){
+        return Object.prototype.toString.call( value  ) === '[object Date]'
+      }
+      // =======================================================================
+      var isElement = function( value ){
+          return !!( value && value.nodeType === 1 );
+      }
+      // =======================================================================
+      var isFunction = function( value ){
+        return Object.prototype.toString.call( value  ) === '[object Function]'
+      }
+      // =======================================================================
+      var isNull = function( value ){
+        return Object.prototype.toString.call( value  ) === '[object Null]'
+      }
+      // =======================================================================
+      var isNumber = function( value ){
+        return Object.prototype.toString.call( value  ) === '[object Number]'
+      }
+      // =======================================================================
+      var isObject = function( value ){
+        return Object.prototype.toString.call( value  ) === '[object Object]'
+      }
+      // =======================================================================
+      var isString = function( value ){
+        return Object.prototype.toString.call( value  ) === '[object String]'
+      }
+      // =======================================================================
+      var isUndefined = function( value ){
+        return Object.prototype.toString.call( value  ) === '[object Undefined]'
+      }
+      // =======================================================================
+      var base = function( func ){
+          return function( value ,  done ){
+            if( isFunction( done ) ){
+               if( func( value ) ){
+                 done( value )
+               }
+            }else{
+              return func(value)
+            }
+          }
+      }
+
       return {
-        isArray:function( value ){
-            return Object.prototype.toString.call( value  ) === '[object Array]'
-        },
-        isBoolean:function( value ){
-          return value === true || value === false || Object.prototype.toString.call( value  ) === '[object Boolean]'
-        },
-        isDate:function( value ){
-          return Object.prototype.toString.call( value  ) === '[object Date]'
-        },
-        isElement:function( value ){
-        		return !!( value && value.nodeType === 1 );
-        },
-        isFunction:function( value ){
-          return Object.prototype.toString.call( value  ) === '[object Function]'
-        },
-        isNull:function( value ){
-          return Object.prototype.toString.call( value  ) === '[object Null]'
-        },
-        isNumber:function( value ){
-          return Object.prototype.toString.call( value  ) === '[object Number]'
-        },
-        isObject:function( value ){
-          return Object.prototype.toString.call( value  ) === '[object Object]'
-        },
-        isString:function( value ){
-          return Object.prototype.toString.call( value  ) === '[object String]'
-        },
-        isUndefined:function( value ){
-          return Object.prototype.toString.call( value  ) === '[object Undefined]'
-        }
+        isArray:base(isArray),
+        isBoolean:base(isBoolean),
+        isDate:base(isDate),
+        isElement:base(isElement),
+        isFunction:base(isFunction),
+        isNull:base(isNull),
+        isNumber:base(isNumber),
+        isObject:base(isObject),
+        isString:base(isString),
+        isUndefined:base(isUndefined)
       }
   })

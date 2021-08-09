@@ -1,3 +1,4 @@
-var ppIs = require('./pp-is.min.js');
-console.log( ppIs.isNumber(10000) );
-console.log( ppIs.isElement(10000) );
+var ppIs = require('./pp-is.js');
+ppIs.isString("Hello Word",function(value){
+      console.log(value);
+})
