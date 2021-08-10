@@ -23,20 +23,47 @@ Checks if value is classified as an Array object.
 
 ---
 #### `isBoolean`
+
+Checks if value is either true or false.
+
 ---
 #### `isDate`
+
+Checks if value is a Date
+
 ---
 #### `isElement`
+
+Checks if value is a DOM element.
+
 ---
 #### `isFunction`
+
+Checks if value is a Function.
+
 ---
 #### `isNull`
+
+Checks if value is a Null.
+
 ---
 #### `isNumber`
+
+Checks if value is a Number.
+
 ---
 #### `isObject`
+
+Checks if value is classified as an Object.
+
 ---
 #### `isString`
+
+Checks if value is a string.
+
 ---
 #### `isUndefined`
+
+Checks if value is a undefined.
+
 ---
