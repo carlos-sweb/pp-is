@@ -19,7 +19,8 @@ npm i pp-is --save
 
 #### `isArray`
 
-_Checks if value is classified as an Array object._
+Checks if value is classified as an Array object.
+
 ---
 #### `isBoolean`
 ---
