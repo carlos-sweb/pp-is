@@ -67,3 +67,26 @@ Checks if value is a string.
 Checks if value is a undefined.
 
 ---
+
+## How to use ?
+
+```javascript
+
+var value = "string...";
+
+if( isString(value) ){
+  // Enter your code here
+}
+```
+
+### or
+
+```javascript
+
+var value = "string...";
+
+isString( value , function( val ){
+    // Enter your code here
+})
+
+```

@@ -21,7 +21,8 @@
     "isObject",
     "isString",
     "isUndefined",
-    "isElement"
+    "isElement",
+    "isEmpty"
   ],
   "author": "Carlos Illesca",
   "license": "MIT",
