@@ -12,17 +12,18 @@
       }()
   ));
   })(this,function(){
+      var toString = Object.prototype.toString;
       // =======================================================================
       var isArray  = function( value ){
-          return Object.prototype.toString.call( value  ) === '[object Array]'
+          return toString.call( value  ) === '[object Array]'
       }
       // =======================================================================
       var isBoolean = function( value ){
-        return value === true || value === false || Object.prototype.toString.call( value  ) === '[object Boolean]'
+        return value === true || value === false || toString.call( value  ) === '[object Boolean]'
       }
       // =======================================================================
       var isDate = function( value ){
-        return Object.prototype.toString.call( value  ) === '[object Date]'
+        return toString.call( value  ) === '[object Date]'
       }
       // =======================================================================
       var isElement = function( value ){
@@ -30,34 +31,48 @@
       }
       // =======================================================================
       var isFunction = function( value ){
-        return Object.prototype.toString.call( value  ) === '[object Function]'
+        return toString.call( value  ) === '[object Function]'
       }
       // =======================================================================
       var isNull = function( value ){
-        return Object.prototype.toString.call( value  ) === '[object Null]'
+        return toString.call( value  ) === '[object Null]'
       }
       // =======================================================================
       var isNumber = function( value ){
-        return Object.prototype.toString.call( value  ) === '[object Number]'
+        return toString.call( value  ) === '[object Number]'
       }
       // =======================================================================
       var isObject = function( value ){
-        return Object.prototype.toString.call( value  ) === '[object Object]'
+        return toString.call( value  ) === '[object Object]'
       }
       // =======================================================================
       var isString = function( value ){
-        return Object.prototype.toString.call( value  ) === '[object String]'
+        return toString.call( value  ) === '[object String]'
       }
       // =======================================================================
       var isUndefined = function( value ){
-        return Object.prototype.toString.call( value  ) === '[object Undefined]'
+        return toString.call( value  ) === '[object Undefined]'
+      }
+      var isEmpty = function( value ){
+          if( isString(value) ){
+            return value.trim() === "";
+          }
+          if( isArray(value) ){
+            return value.length == 0;
+          }
+          if( isObject(value) ){
+             return Object.keys(value).length === 0;
+          }
+
+          return true;
       }
       // =======================================================================
       var base = function( func ){
+          // Retornamos una funcion
           return function( value ,  done ){
             if( isFunction( done ) ){
                if( func( value ) ){
-                 done( value )
+                 return done( value )
                }
             }else{
               return func(value)
@@ -70,6 +85,7 @@
         isBoolean:base(isBoolean),
         isDate:base(isDate),
         isElement:base(isElement),
+        isEmpty:base(isEmpty),
         isFunction:base(isFunction),
         isNull:base(isNull),
         isNumber:base(isNumber),
