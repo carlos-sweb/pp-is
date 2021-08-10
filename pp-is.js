@@ -64,7 +64,7 @@
             }
           }
       }
-
+      // =======================================================================
       return {
         isArray:base(isArray),
         isBoolean:base(isBoolean),

@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "main": "src/is.js",
   "scripts": {
-    "compile": "terser --output src/isArray.min.js --compress --mangle --comments false -- modules/isArray.js && terser --output src/isBoolean.min.js --compress --mangle --comments false -- modules/isBoolean.js && terser --output src/isDate.min.js --compress --mangle --comments false -- modules/isDate.js && terser --output src/isElement.min.js --compress --mangle --comments false -- modules/isElement.js && terser --output src/isFunction.min.js --compress --mangle --comments false -- modules/isFunction.js && terser --output src/isNull.min.js --compress --mangle --comments false -- modules/isNull.js && terser --output src/isNumber.min.js --compress --mangle --comments false -- modules/isNumber.js && terser --output src/isObject.min.js --compress --mangle --comments false -- modules/isObject.js && terser --output src/isString.min.js --compress --mangle --comments false -- modules/isString.js && terser --output src/isUndefined.min.js --compress --mangle --comments false -- modules/isUndefined.js && terser --output pp-is.min.js --compress --mangle --comments false -- pp-is.js "
+    "compile":"terser --output pp-is.min.js --compress --mangle --comments false -- pp-is.js "
   },
   "repository": {
     "type": "git",
