@@ -70,7 +70,6 @@ Checks if value is a undefined.
 #### `isEmail`
 
 Checks if value is a valid email.
-
 ---
 
 ## How to use ?
