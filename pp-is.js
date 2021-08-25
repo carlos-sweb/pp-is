@@ -1,7 +1,7 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.0.2 (2020/08/09 22:58 PM)
+ * @version 1.0.3 (2020/08/24 20:18 PM)
  * Released under the MIT License
  */
 (function(global,factory){
@@ -67,6 +67,12 @@
           return true;
       }
       // =======================================================================
+      var isEmail = function( value ){
+          // get from https://fightingforalostcause.net/content/misc/2006/compare-email-regex.php
+          var patternEmail = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+          return patternEmail.test( value )
+      }
+      // =======================================================================
       var base = function( func ){
           // Retornamos una funcion
           return function( value ,  done ){
@@ -91,6 +97,7 @@
         isNumber:base(isNumber),
         isObject:base(isObject),
         isString:base(isString),
-        isUndefined:base(isUndefined)
+        isUndefined:base(isUndefined),
+        isEmail:base(isEmail)
       }
   })
