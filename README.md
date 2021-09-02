@@ -73,6 +73,13 @@ Checks if value is a valid email.
 
 ---
 
+---
+#### `isNaN`
+
+Checks if value is a valid Number from String.
+
+---
+
 ## How to use ?
 
 ```javascript

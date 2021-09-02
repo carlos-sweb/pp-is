@@ -1,7 +1,7 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.0.4 (2020/08/24 20:18 PM)
+ * @version 1.0.5 (2020/09/01 20:54 PM)
  * Released under the MIT License
  */
 (function(global,factory){
@@ -12,6 +12,7 @@
       }()
   ));
   })(this,function(){
+      // =======================================================================
       var toString = Object.prototype.toString;
       // =======================================================================
       var isArray  = function( value ){
@@ -73,6 +74,10 @@
           return patternEmail.test( value )
       }
       // =======================================================================
+      var isNaN = function( value ){
+        return Number.isNaN( parseInt(value) )
+      }
+      // =======================================================================
       var base = function( func ){
           // Retornamos una funcion
           return function( value ,  done ){
@@ -98,6 +103,7 @@
         isObject:base(isObject),
         isString:base(isString),
         isUndefined:base(isUndefined),
-        isEmail:base(isEmail)
+        isEmail:base(isEmail),
+        isNaN:base(isNaN)
       }
   })
