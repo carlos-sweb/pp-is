@@ -2,7 +2,7 @@
   "devDependencies": {},
   "name": "pp-is",
   "description": "Collection of methods for check",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "pp-is.js",
   "scripts": {
     "compile":"terser --output pp-is.min.js --compress --mangle --comments false -- pp-is.js "
@@ -23,7 +23,9 @@
     "isUndefined",
     "isElement",
     "isEmpty",
-    "isEmail"
+    "isEmail",
+    "isNaN",
+    "isRegExp"
   ],
   "author": "Carlos Illesca",
   "license": "MIT",

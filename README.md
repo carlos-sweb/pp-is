@@ -80,6 +80,13 @@ Checks if value is a valid Number from String.
 
 ---
 
+---
+#### `isRegExp`
+
+Checks if value is a RegExp.
+
+---
+
 ## How to use ?
 
 ```javascript

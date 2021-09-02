@@ -1,7 +1,7 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.0.5 (2020/09/01 20:54 PM)
+ * @version 1.0.6 (2020/09/01 22:23 PM)
  * Released under the MIT License
  */
 (function(global,factory){
@@ -17,6 +17,10 @@
       // =======================================================================
       var isArray  = function( value ){
           return toString.call( value  ) === '[object Array]'
+      }
+      // =======================================================================
+      var isRegExp  = function( value ){
+          return toString.call( value  ) === '[object RegExp]'
       }
       // =======================================================================
       var isBoolean = function( value ){
@@ -104,6 +108,7 @@
         isString:base(isString),
         isUndefined:base(isUndefined),
         isEmail:base(isEmail),
-        isNaN:base(isNaN)
+        isNaN:base(isNaN),
+        isRegExp:base(isRegExp)
       }
   })
