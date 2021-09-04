@@ -87,6 +87,13 @@ Checks if value is a RegExp.
 
 ---
 
+---
+#### `isUrl`
+
+Checks if value is a valid Url.
+
+---
+
 ## How to use ?
 
 ```javascript

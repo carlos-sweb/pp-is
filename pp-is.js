@@ -1,7 +1,7 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.0.6 (2020/09/01 22:23 PM)
+ * @version 1.0.7 (2020/09/04 00:34 PM)
  * Released under the MIT License
  */
 (function(global,factory){
@@ -82,6 +82,16 @@
         return Number.isNaN( parseInt(value) )
       }
       // =======================================================================
+      var isUrl = function( value ){
+          var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+          '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+          '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+          '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+          '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+          '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+          return !!pattern.test(value);
+      }
+      // =======================================================================
       var base = function( func ){
           // Retornamos una funcion
           return function( value ,  done ){
@@ -109,6 +119,7 @@
         isUndefined:base(isUndefined),
         isEmail:base(isEmail),
         isNaN:base(isNaN),
-        isRegExp:base(isRegExp)
+        isRegExp:base(isRegExp),
+        isUrl:base(isUrl)
       }
   })
