@@ -1,7 +1,4 @@
 {
-  "devDependencies": {
-    "typescript": "^5.2.2"
-  },
   "name": "pp-is",
   "description": "Collection of methods for check",
   "version": "1.0.8",
