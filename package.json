@@ -1,11 +1,13 @@
 {
-  "devDependencies": {},
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
   "name": "pp-is",
   "description": "Collection of methods for check",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "pp-is.js",
   "scripts": {
-    "compile":"terser --output pp-is.min.js --compress --mangle --comments false -- pp-is.js "
+    "compile": "terser --output pp-is.min.js --compress --mangle --comments false -- pp-is.js"
   },
   "repository": {
     "type": "git",
