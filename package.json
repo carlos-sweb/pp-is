@@ -25,7 +25,9 @@
     "isEmail",
     "isNaN",
     "isRegExp",
-    "isUrl"
+    "isUrl",
+    "isHTMLCollection",
+    "isNodeList"
   ],
   "author": "Carlos Illesca",
   "license": "MIT",

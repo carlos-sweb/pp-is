@@ -1,7 +1,7 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.1.0 (2022/10/02 20:41 PM)
+ * @version 1.2.0 (2024/02/26 15:00 PM)
  * Released under the MIT License
  */
 (function(global,factory){
@@ -14,7 +14,11 @@
   })(this,function(){
       // ======================================================================= 
       function getType( value ){ return Object.prototype.toString.call(value) }
-      // =======================================================================      
+      // =======================================================================
+      function isNodeList( value ){ return NodeList.prototype.isPrototypeOf(value) }
+      // =======================================================================
+      function isHTMLCollection( value ){ return HTMLCollection.prototype.isPrototypeOf(value) }
+      // =======================================================================
       function isArray ( value ){ return getType( value  ) === '[object Array]'}
       // =======================================================================
       function isRegExp ( value ){ return getType( value  ) === '[object RegExp]'}
@@ -86,6 +90,8 @@
         'isEmail':base(isEmail),
         'isNaN':base(isNaN),
         'isRegExp':base(isRegExp),
-        'isUrl':base(isUrl)
+        'isUrl':base(isUrl),
+        'isNodeList':base(isNodeList),
+        'isHTMLCollection':base(isHTMLCollection)
       }
   })
