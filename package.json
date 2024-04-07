@@ -1,7 +1,7 @@
 {
   "name": "pp-is",
   "description": "Collection of methods for check",
-  "version": "1.1.0",
+  "version": "1.2.1",
   "main": "pp-is.js",
   "scripts": {
     "compile": "terser --output pp-is.min.js --compress --mangle --comments false -- pp-is.js"

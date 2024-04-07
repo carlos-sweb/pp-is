@@ -94,6 +94,18 @@ Checks if value is a valid Url.
 
 ---
 
+#### `isNodeList`
+
+Checks if value is a valid NodeList.
+
+---
+
+#### `isHTMLCollection`
+
+Checks if value is a valid HTMLCollection.
+
+---
+
 ## How to use ?
 
 ```javascript
