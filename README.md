@@ -128,3 +128,5 @@ ppIs.isString( value , function( val ){
 })
 
 ```
+
+[Lea este documento en español](./README_es.md)

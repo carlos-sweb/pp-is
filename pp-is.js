@@ -1,12 +1,12 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.2.1 (2024/02/26 15:00 PM)
+ * @version 1.2.2 (2024/09/18 15:14 PM)
  * Released under the MIT License
  */
 ;(function(){
 
-  function is(){
+  const is = () => {
     const getType = ( value )=>Object.prototype.toString.call(value),      
     getTypeCompare = (value,expresion) =>(getType(value) === expresion),
     isNodeList = ( value )=>(typeof NodeList === "undefined" ? false : NodeList.prototype.isPrototypeOf(value)),      
@@ -78,24 +78,25 @@
   }
 
   /** Detect free variable `global` from Node.js. */
-  var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+  const freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
 
   /** Detect free variable `self`. */
-  var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+  const freeSelf = typeof self == 'object' && self && self.Object === Object && self;
 
   /** Used as a reference to the global object. */
-  var root = freeGlobal || freeSelf || Function('return this')();
+  const root = freeGlobal || freeSelf || Function('return this')();
 
   /** Detect free variable `exports`. */
-  var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+  const freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
 
   /** Detect free variable `module`. */
-  var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+  const freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
 
   if (typeof define == 'function' && typeof define.amd == 'object' && define.amd){      
-    define(function(){
+    define( ()=> is() );
+    /* define(function(){
       return is();
-    });
+    }); */
   }
   else if( freeModule ){    
     freeModule.exports = is()
