@@ -3,8 +3,11 @@
   "description": "Collection of methods for check",
   "version": "1.2.2",
   "main": "pp-is.js",
-  "scripts": {
-    "compile": "terser --output pp-is.min.js --compress --mangle --comments false -- pp-is.js"
+  "scripts"   :{    
+    "djs":"documentation build ./dist/pp-is.js -f html -o ./djs && php -S localhost:8091 -t ./djs",
+    "docs"    : "jsdoc ./dist/pp-is.js -d docs && php -S localhost:8091 -t ./docs",
+    "serve-webpack"   : "cp dist/pp-is.js ./test/js/ && webpack --config ./test/config/webpack.config.js && php -S localhost:8090 -t ./test",    
+    "compile" : "terser --output dist/pp-is.min.js --compress --mangle --comments false -- dist/pp-is.js"
   },
   "repository": {
     "type": "git",

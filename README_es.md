@@ -4,7 +4,7 @@
 
 Incluye pp-is.js en tu proyecto web:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/pp-is@latest/pp-is.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/pp-is@1.2.2/pp-is.min.js" ></script>
 ```
 
 O
@@ -119,13 +119,27 @@ if( ppIs.isString(value) ){
 
 ### or
 
+
+
 ```javascript
+// Puedes hacer una evaluación extra
+const done = ( value ) => {  
+  return value !== 'string';
+}
 
-var value = "string...";
+const reject = ( value ) => {
+  
+}
 
-ppIs.isString( value , function( val ){
-    // Ingresa tu codigo aqui
-})
+const value = 'string';
+
+const result = ppIs.isString( value , done , reject );
+
+if( result ){
+
+}else{
+
+}
 
 ```
 

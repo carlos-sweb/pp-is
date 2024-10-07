@@ -5,7 +5,7 @@
 In the web project include pp-is.js with:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/pp-is@latest/pp-is.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/pp-is@1.2.2/pp-is.min.js" ></script>
 ```
 
 Or
@@ -119,13 +119,27 @@ if( ppIs.isString(value) ){
 
 ### or
 
+
+
 ```javascript
+// You can make an extra evaluation
+const done = ( value ) => {  
+  return value !== 'string';
+}
 
-var value = "string...";
+const reject = ( value ) => {
+  
+}
 
-ppIs.isString( value , function( val ){
-    // Enter your code here
-})
+const value = 'string';
+
+const result = ppIs.isString( value , done , reject );
+
+if( result ){
+
+}else{
+
+}
 
 ```
 
