@@ -1,7 +1,7 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.2.3 (2024/10/06 23:25 PM)
+ * @version 1.2.3 (2024/10/06 23:58 PM)
  * Released under the MIT License
  */
 ;(function(){
