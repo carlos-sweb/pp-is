@@ -4,7 +4,7 @@
 
 Incluye pp-is.js en tu proyecto web:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/pp-is@1.2.4/pp-is.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/pp-is@1.2.5/pp-is.min.js" ></script>
 ```
 
 O

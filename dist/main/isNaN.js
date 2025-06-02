@@ -4,5 +4,5 @@
 * @param { Any } value - Any Value      
 * @return {boolean}
 */
-const isNaN = ( value )=>(Number.isNaN( parseInt(value)))
+const isNaN = ( value )=>(Number.isNaN( Number.parseInt(value)))
 export { isNaN as default }

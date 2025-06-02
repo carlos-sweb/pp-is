@@ -1,7 +1,7 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.2.4 (2025/05/27 23:52 PM)
+ * @version 1.2.5 (2025/06/01 21:58 PM)
  * Released under the MIT License
  */ 
 import isString from "./main/isString.js"
@@ -13,8 +13,8 @@ import isDate from "./main/isDate.js"
 import isFunction from "./main/isFunction.js"
 import isUndefined from "./main/isUndefined.js"
 import isNull from "./main/isNull.js"
-import isNumber from "./main/isNumber.js"
 import isNaN from "./main/isNaN.js"
+import isNumber from "./main/isNumber.js"
 import isEmail from "./main/isEmail.js"
 import isUrl from "./main/isUrl.js"
 import isEmpty from "./main/isEmpty.js"
