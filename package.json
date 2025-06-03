@@ -1,7 +1,7 @@
 {
   "name": "pp-is",
   "description": "Collection of methods for check",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "main": "dist/pp-is.min.js",
   "scripts": {
     "build": "rollup -c && terser -o ./dist/pp-is.min.js  --compress --mangle --comments false -- ./dist/pp-is.rollup.js && rm -rf ./dist/pp-is.rollup.js",
@@ -31,7 +31,9 @@
     "isRegExp",
     "isUrl",
     "isHTMLCollection",
-    "isNodeList"
+    "isNodeList",
+    "isBlank",
+    "isPromise"
   ],
   "author": "Carlos Illesca",
   "license": "MIT",

@@ -106,6 +106,24 @@ Checks if value is a valid HTMLCollection.
 
 ---
 
+#### `isEmpty`
+
+Verify that a value is not empty, in the case of a string that is not “” , in the case of an array that is not \[\] and an object that is not {}.
+
+---
+
+#### `isBlank`
+
+Check that a value is blank, which is when a string is not empty but filled with blank spaces.
+
+---
+
+#### `isPromise`
+
+Checks if value is classified as an Promise object.
+
+---
+
 ## How to use ?
 
 ```javascript

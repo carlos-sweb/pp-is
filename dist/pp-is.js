@@ -1,10 +1,12 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.2.5 (2025/06/01 21:58 PM)
+ * @version 1.2.6 (2025/06/02 21:43 PM)
  * Released under the MIT License
  */ 
+import isPromise from "./main/isPromise.js"
 import isString from "./main/isString.js"
+import isBlank from "./main/isBlank.js"
 import isArray from "./main/isArray.js"
 import isObject from "./main/isObject.js"
 import isRegExp from "./main/isRegExp.js"
@@ -46,12 +48,13 @@ import base from "./helper/base.js"
  * @property {function} isFreeModule - {@link isFreeModule}
  * @property {function} getRoot - {@link getRoot}
  */
-  const is = {
+  const is = {      
       'isArray':base(isArray),
       'isBoolean':base(isBoolean),
       'isDate':base(isDate),
       'isElement':base(isElement),
       'isEmpty':base(isEmpty),
+      'isBlank':base(isBlank),
       'isFunction':base(isFunction),
       'isNull':base(isNull),
       'isNumber':base(isNumber),
@@ -64,6 +67,7 @@ import base from "./helper/base.js"
       'isUrl':base(isUrl),
       'isNodeList':base(isNodeList),
       'isHTMLCollection':base(isHTMLCollection),      
+      'isPromise':base(isPromise)
   }  
 
  export { is as default }

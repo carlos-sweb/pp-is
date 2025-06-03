@@ -106,6 +106,24 @@ Verifica si el valor es un HTTMLCollection valido.
 
 ---
 
+#### `isEmpty`
+
+Verifica que un valor no este vacio , en caso de una cadena que sea distinta a "" , en caso de un arreglo que sea distinoto a [] y un objecto que sea distinto a {}
+
+---
+
+#### `isBlank`
+
+Comprueba que un valor esté en blanco, lo cual ocurre cuando una cadena no está vacía, sino que está llena de espacios en blanco.
+
+---
+
+#### `isPromise`
+
+Comprueba si el valor está clasificado como un objeto Promise.
+
+---
+
 ## ¿ Como se usa ?
 
 ```javascript

@@ -3,7 +3,7 @@ import isArray from "./isArray.js"
 import isObject from "./isObject.js"
 /**
  * @function isEmpty
- * @description - Checks if value is not empty
+ * @description - Verify that a value is not empty, in the case of a string that is not “” , in the case of an array that is not [] and an object that is not {}.
  * @param { Any } value - Any value
  * @example
  * // this a empty string
