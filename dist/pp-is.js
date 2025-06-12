@@ -1,7 +1,7 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.2.6 (2025/06/02 21:43 PM)
+ * @version 1.2.7 (2025/06/11 21:30 PM)
  * Released under the MIT License
  */ 
 import isPromise from "./main/isPromise.js"
@@ -15,6 +15,7 @@ import isDate from "./main/isDate.js"
 import isFunction from "./main/isFunction.js"
 import isUndefined from "./main/isUndefined.js"
 import isNull from "./main/isNull.js"
+import isNil from "./main/isNil.js"
 import isNaN from "./main/isNaN.js"
 import isNumber from "./main/isNumber.js"
 import isEmail from "./main/isEmail.js"
@@ -61,6 +62,7 @@ import base from "./helper/base.js"
       'isObject':base(isObject),
       'isString':base(isString),
       'isUndefined':base(isUndefined),
+      'isNil':base(isNil),
       'isEmail':base(isEmail),
       'isNaN':base(isNaN),
       'isRegExp':base(isRegExp),

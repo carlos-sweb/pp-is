@@ -47,6 +47,11 @@ Verifica si el valor es una función
 Verifica si el valor es un nulo.
 
 ---
+#### `isNil`
+
+Verifica si el valor es un nulo o no definido.
+
+---
 #### `isNumber`
 
 Verifica si el valor es un numero.

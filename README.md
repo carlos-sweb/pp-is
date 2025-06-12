@@ -47,6 +47,11 @@ Checks if value is a Function.
 Checks if value is a Null.
 
 ---
+#### `isNil`
+
+Checks if value is a Null or Undefined
+
+---
 #### `isNumber`
 
 Checks if value is a Number.
