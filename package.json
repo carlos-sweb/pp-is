@@ -1,7 +1,7 @@
 {
   "name": "pp-is",
   "description": "Collection of methods for check",
-  "version": "1.2.7",
+  "version": "1.3.0",
   "main": "dist/pp-is.min.js",
   "scripts": {
     "build": "rollup -c && terser -o ./dist/pp-is.min.js  --compress --mangle --comments false -- ./dist/pp-is.rollup.js && rm -rf ./dist/pp-is.rollup.js",
@@ -34,12 +34,39 @@
     "isNodeList",
     "isBlank",
     "isPromise",
-    "isNil"
+    "isNil",
+    "isSymbol",
+    "isBigInt",
+    "isInteger",
+    "isFinite",
+    "isPositive",
+    "isNegative",
+    "isAlpha",
+    "isAlphanumeric",
+    "isNumericString",
+    "isLowercase",
+    "isUppercase",
+    "isHexColor",
+    "isJSON",
+    "isUUID",
+    "isIPv4",
+    "isIterable",
+    "isTruthy",
+    "isFalsy",
+    "isCallable",
+    "isAsyncFunction",
+    "isPromiseLike",
+    "isFrozen",
+    "isSealed"
   ],
   "author": "Carlos Illesca",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/carlos-sweb/pp-is/issues"
   },
-  "homepage": "https://github.com/carlos-sweb/pp-is#readme"
+  "homepage": "https://github.com/carlos-sweb/pp-is#readme",
+  "devDependencies": {
+    "rollup": "^4.62.2",
+    "terser": "^5.49.0"
+  }
 }

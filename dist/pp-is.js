@@ -1,7 +1,7 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.2.7 (2025/06/11 21:30 PM)
+ * @version 1.3.0 (2026/07/14)
  * Released under the MIT License
  */ 
 import isPromise from "./main/isPromise.js"
@@ -24,6 +24,29 @@ import isEmpty from "./main/isEmpty.js"
 import isNodeList from "./main/isNodeList.js"
 import isElement from "./main/isElement.js"
 import isHTMLCollection from "./main/isHTMLCollection.js"
+import isSymbol from "./main/isSymbol.js"
+import isBigInt from "./main/isBigInt.js"
+import isInteger from "./main/isInteger.js"
+import isFinite from "./main/isFinite.js"
+import isPositive from "./main/isPositive.js"
+import isNegative from "./main/isNegative.js"
+import isAlpha from "./main/isAlpha.js"
+import isAlphanumeric from "./main/isAlphanumeric.js"
+import isNumericString from "./main/isNumericString.js"
+import isLowercase from "./main/isLowercase.js"
+import isUppercase from "./main/isUppercase.js"
+import isHexColor from "./main/isHexColor.js"
+import isJSON from "./main/isJSON.js"
+import isUUID from "./main/isUUID.js"
+import isIPv4 from "./main/isIPv4.js"
+import isIterable from "./main/isIterable.js"
+import isTruthy from "./main/isTruthy.js"
+import isFalsy from "./main/isFalsy.js"
+import isCallable from "./main/isCallable.js"
+import isAsyncFunction from "./main/isAsyncFunction.js"
+import isPromiseLike from "./main/isPromiseLike.js"
+import isFrozen from "./main/isFrozen.js"
+import isSealed from "./main/isSealed.js"
 import base from "./helper/base.js" 
 /** 
  * @description - Obtains the object to be exported with the following main functions
@@ -45,9 +68,29 @@ import base from "./helper/base.js"
  * @property {function} isUrl - {@link isUrl}
  * @property {function} isNodeList - {@link isNodeList}
  * @property {function} isHTMLCollection - {@link isHTMLCollection}
- * @property {function} isAMD - {@link isAMD}
- * @property {function} isFreeModule - {@link isFreeModule}
- * @property {function} getRoot - {@link getRoot}
+ * @property {function} isSymbol - {@link isSymbol}
+ * @property {function} isBigInt - {@link isBigInt}
+ * @property {function} isInteger - {@link isInteger}
+ * @property {function} isFinite - {@link isFinite}
+ * @property {function} isPositive - {@link isPositive}
+ * @property {function} isNegative - {@link isNegative}
+ * @property {function} isAlpha - {@link isAlpha}
+ * @property {function} isAlphanumeric - {@link isAlphanumeric}
+ * @property {function} isNumericString - {@link isNumericString}
+ * @property {function} isLowercase - {@link isLowercase}
+ * @property {function} isUppercase - {@link isUppercase}
+ * @property {function} isHexColor - {@link isHexColor}
+ * @property {function} isJSON - {@link isJSON}
+ * @property {function} isUUID - {@link isUUID}
+ * @property {function} isIPv4 - {@link isIPv4}
+ * @property {function} isIterable - {@link isIterable}
+ * @property {function} isTruthy - {@link isTruthy}
+ * @property {function} isFalsy - {@link isFalsy}
+ * @property {function} isCallable - {@link isCallable}
+ * @property {function} isAsyncFunction - {@link isAsyncFunction}
+ * @property {function} isPromiseLike - {@link isPromiseLike}
+ * @property {function} isFrozen - {@link isFrozen}
+ * @property {function} isSealed - {@link isSealed}
  */
   const is = {      
       'isArray':base(isArray),
@@ -69,7 +112,30 @@ import base from "./helper/base.js"
       'isUrl':base(isUrl),
       'isNodeList':base(isNodeList),
       'isHTMLCollection':base(isHTMLCollection),      
-      'isPromise':base(isPromise)
+      'isPromise':base(isPromise),
+      'isSymbol':base(isSymbol),
+      'isBigInt':base(isBigInt),
+      'isInteger':base(isInteger),
+      'isFinite':base(isFinite),
+      'isPositive':base(isPositive),
+      'isNegative':base(isNegative),
+      'isAlpha':base(isAlpha),
+      'isAlphanumeric':base(isAlphanumeric),
+      'isNumericString':base(isNumericString),
+      'isLowercase':base(isLowercase),
+      'isUppercase':base(isUppercase),
+      'isHexColor':base(isHexColor),
+      'isJSON':base(isJSON),
+      'isUUID':base(isUUID),
+      'isIPv4':base(isIPv4),
+      'isIterable':base(isIterable),
+      'isTruthy':base(isTruthy),
+      'isFalsy':base(isFalsy),
+      'isCallable':base(isCallable),
+      'isAsyncFunction':base(isAsyncFunction),
+      'isPromiseLike':base(isPromiseLike),
+      'isFrozen':base(isFrozen),
+      'isSealed':base(isSealed)
   }  
 
  export { is as default }
