@@ -7,5 +7,5 @@
 * // return true
 * @return {boolean}
 */
-const isEmail = ( value )=>/^([a-z1-9\._-]+)@([a-z0-9-]+\.[a-z]{2,11}|[a-z0-9]+\.[a-z]{2,24}\.[a-z]{2,24})$/i.test( value )
+const isEmail = ( value )=>/^([a-z0-9\._-]+)@([a-z0-9-]+\.[a-z]{2,11}|[a-z0-9]+\.[a-z]{2,24}\.[a-z]{2,24})$/i.test( value )
 export { isEmail as default }

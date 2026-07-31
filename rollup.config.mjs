@@ -1,5 +1,5 @@
 export default {
-	input: "./dist/pp-is.js",
+	input: "./src/pp-is.js",
 	output: {
 		name : "ppIs",
 		compact:false,

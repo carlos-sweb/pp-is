@@ -1,7 +1,7 @@
 /*!!
  * Power Panel pp-is <https://github.com/carlos-sweb/pp-is>
  * @author Carlos Illesca
- * @version 1.3.0 (2026/07/14)
+ * @version 1.4.0 (2026/07/31)
  * Released under the MIT License
  */ 
 import isPromise from "./main/isPromise.js"

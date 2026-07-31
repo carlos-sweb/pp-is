@@ -28,13 +28,13 @@ npm i pp-is
 ### 🌐 CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/pp-is@1.3.0/pp-is.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pp-is@1.4.0/pp-is.min.js"></script>
 ```
 
 ### 🚀 First Use
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/pp-is@1.3.0/pp-is.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pp-is@1.4.0/pp-is.min.js"></script>
 <script>
   // ppIs is available globally
   if (ppIs.isEmail(document.getElementById('email').value)) {
@@ -112,7 +112,7 @@ ppIs.isNull(null)       // true
 | `isFinite(value)` | Is it finite (not Infinity)? | `ppIs.isFinite(42) → true` |
 | `isPositive(value)` | Is it greater than zero? | `ppIs.isPositive(5) → true` |
 | `isNegative(value)` | Is it less than zero? | `ppIs.isNegative(-5) → true` |
-| `isNaN(value)` | Can it NOT be parsed as integer? | `ppIs.isNaN('abc') → true` |
+| `isNaN(value)` | Is it NOT a valid number? | `ppIs.isNaN('abc') → true` |
 
 ---
 
@@ -178,8 +178,8 @@ ppIs.isNull(null)       // true
 
 | Function | Description | Example |
 |----------|-------------|---------|
-| `isFrozen(value)` | Is a frozen object? | `ppIs.isFrozen(Object.freeze({})) → true` |
-| `isSealed(value)` | Is a sealed object? | `ppIs.isSealed(Object.seal({})) → true` |
+| `isFrozen(value)` | Is it frozen (objects, arrays, functions; primitives are always frozen)? | `ppIs.isFrozen(Object.freeze([1,2])) → true` |
+| `isSealed(value)` | Is it sealed (objects, arrays, functions; primitives are always sealed)? | `ppIs.isSealed(Object.seal([1,2])) → true` |
 
 ---
 
@@ -281,26 +281,28 @@ Contributions are welcome! Here's how to get started:
    ```bash
    npm install
    ```
-4. **Create** your function in `dist/main/yourFunction.js`
-5. **Add** it to `dist/pp-is.js` (import + add to `is` object)
+4. **Create** your function in `src/main/yourFunction.js`
+5. **Add** it to `src/pp-is.js` (import + add to `is` object)
 6. **Build** to verify
    ```bash
    npm run build
    ```
 7. **Test** your function
    ```bash
-   node -e "const ppIs = require('./dist/pp-is.min.js'); console.log(ppIs.yourFunction('test'))"
+   bun test
    ```
+   Add a matching test case in `test/is.test.js` (or a new `test/*.test.js` file).
 8. **Submit** a pull request
 
 ### 📋 Guidelines
 
-- One function per file in `dist/main/`
+- One function per file in `src/main/`
 - Use `export { funcName as default }`
 - Add JSDoc comments (`@function`, `@description`, `@param`, `@return`)
 - Wrap with `base()` for callback support
 - Keep it **zero dependencies**
 - Follow existing code style (arrow functions, no semicolons)
+- Add tests for your function in `test/`
 
 ---
 
