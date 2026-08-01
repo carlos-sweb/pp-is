@@ -1,10 +1,19 @@
 {
   "name": "pp-is",
   "description": "Collection of methods for check",
-  "version": "1.4.0",
-  "main": "dist/pp-is.min.js",
+  "version": "2.0.0",
+  "main": "./dist/pp-is.cjs",
+  "exports": {
+    ".": {
+      "bun": "./src/pp-is.js",
+      "browser": "./dist/pp-is.mjs",
+      "import": "./dist/pp-is.mjs",
+      "require": "./dist/pp-is.cjs",
+      "default": "./dist/pp-is.cjs"
+    }
+  },
   "scripts": {
-    "build": "rollup -c && terser -o ./dist/pp-is.min.js  --compress --mangle --comments false -- ./dist/pp-is.rollup.js && rm -rf ./dist/pp-is.rollup.js",
+    "build": "bun run scripts/build.mjs",
     "djs": "documentation build ./src/pp-is.js -f html -o ./djs && php -S localhost:8091 -t ./djs",
     "docs": "jsdoc ./src/pp-is.js -d docs && php -S localhost:8091 -t ./docs",
     "test": "bun test"
@@ -63,9 +72,5 @@
   "bugs": {
     "url": "https://github.com/carlos-sweb/pp-is/issues"
   },
-  "homepage": "https://github.com/carlos-sweb/pp-is#readme",
-  "devDependencies": {
-    "rollup": "^4.62.2",
-    "terser": "^5.49.0"
-  }
+  "homepage": "https://github.com/carlos-sweb/pp-is#readme"
 }

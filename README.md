@@ -28,13 +28,13 @@ npm i pp-is
 ### 🌐 CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/pp-is@1.4.0/pp-is.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pp-is/dist/pp-is.min.js"></script>
 ```
 
 ### 🚀 First Use
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/pp-is@1.4.0/pp-is.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pp-is/dist/pp-is.min.js"></script>
 <script>
   // ppIs is available globally
   if (ppIs.isEmail(document.getElementById('email').value)) {
@@ -277,15 +277,17 @@ Contributions are welcome! Here's how to get started:
    git clone https://github.com/YOUR_USERNAME/pp-is.git
    cd pp-is
    ```
-3. **Install** dependencies
+3. **Install** dependencies ([Bun](https://bun.sh) is this project's runtime/build tool)
    ```bash
-   npm install
+   bun install
    ```
 4. **Create** your function in `src/main/yourFunction.js`
 5. **Add** it to `src/pp-is.js` (import + add to `is` object)
-6. **Build** to verify
+6. **Build** to verify — `bun run build` uses Bun's own bundler
+   (`scripts/build.mjs`) to produce `dist/pp-is.mjs` (ESM), `dist/pp-is.cjs`
+   (CommonJS) and `dist/pp-is.min.js` (browser global)
    ```bash
-   npm run build
+   bun run build
    ```
 7. **Test** your function
    ```bash
