@@ -1,10 +1,12 @@
 {
   "name": "pp-is",
   "description": "Collection of methods for check",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "main": "./dist/pp-is.cjs",
+  "types": "./index.d.ts",
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "bun": "./src/pp-is.js",
       "browser": "./dist/pp-is.mjs",
       "import": "./dist/pp-is.mjs",
